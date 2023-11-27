@@ -33,3 +33,12 @@ plot(t,xmod2pi)
 matrix = Traj2Vis(xmod2pi, 0.2*pi);
 FireFlyMovie(matrix, 'Movie_3')
 %image(matrix(:,:,1))
+
+%% see if they've reached synch
+phasediff = x(:,1) - x(:,2);
+figure
+plot(t,phasediff, 'LineWidth', 3)
+set(gca, 'FontSize', 16)
+xlabel('time')
+ylabel('Difference Between Phases')
+%title('Synchronization Check')

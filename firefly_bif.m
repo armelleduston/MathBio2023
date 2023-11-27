@@ -15,6 +15,7 @@ yline(0)
 ylim([-pi/2, 3*pi/2])
 xlabel('\mu')
 ylabel('\phi^*')
+set(gca, 'FontSize', 16)
 
 %% numerical - don't run this; incomplete and I don't rlly know if it will work
 
