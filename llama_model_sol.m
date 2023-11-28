@@ -23,6 +23,8 @@ figure
 plot(t, ymod2pi, '-o')
 xlabel("Time")
 ylabel("Firefly Phases")
+yticks(0:pi/2:2*pi);  
+yticklabels({'0', '\pi/2', '\pi', '3\pi/2', '2\pi'}); 
 legend('Firefly 1', 'Firefly 2', 'Firefly 3')
 set(gca, 'FontSize', 16)
 
@@ -33,6 +35,12 @@ hold on
 xlabel("Firefly 1's Phase")
 ylabel("Firefly 2's Phase")
 zlabel("Firefly 3's Phase")
+xticks(0:pi/2:2*pi);  
+xticklabels({'0', '\pi/2', '\pi', '3\pi/2', '2\pi'}); 
+yticks(0:pi/2:2*pi);  
+yticklabels({'0', '\pi/2', '\pi', '3\pi/2', '2\pi'}); 
+zticks(0:pi/2:2*pi);  
+zticklabels({'0', '\pi/2', '\pi', '3\pi/2', '2\pi'});
 set(gca, 'FontSize', 16)
 hold off
 
