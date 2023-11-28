@@ -13,6 +13,8 @@ yline(0)
 %yline(pi)
 %yline(pi/2)
 ylim([-pi/2, 3*pi/2])
+yticks([-pi/2 0 pi/2 pi 3*pi/2]); 
+yticklabels({'-\pi/2', '0', '\pi/2', '\pi', '3\pi/2'});
 xlabel('\mu')
 ylabel('\phi^*')
 set(gca, 'FontSize', 16)
