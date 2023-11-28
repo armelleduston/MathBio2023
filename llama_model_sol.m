@@ -20,7 +20,7 @@ tfinal = 100;
 ymod2pi = mod(y, 2*pi);
 
 figure
-plot(t, y, '-o')
+plot(t, ymod2pi, '-o')
 xlabel("Time")
 ylabel("Firefly Phases")
 legend('Firefly 1', 'Firefly 2', 'Firefly 3')
@@ -28,7 +28,7 @@ set(gca, 'FontSize', 16)
 
 
 figure
-plot3(y(:,1), y(:, 2), y(:, 3))
+plot3(ymod2pi(:,1), ymod2pi(:, 2), ymod2pi(:, 3))
 hold on
 xlabel("Firefly 1's Phase")
 ylabel("Firefly 2's Phase")
