@@ -1,21 +1,32 @@
 %% define the ODE and parameters
+% movie name
+movie_name = 'Movie_orig_model_sync';
+
 % define stimulus
 S = 1;
 
-% define w and A
+% parameters for llama model
 w = 0.8;
 A = 0.5;
 u = 1;
 
-% define initial conditions
+% parameters for llama model
+%w = [0.1;0.4;0.7];
+%A = 0.5;
+
+% define initial conditions\
 IV = [0,pi];
+%IV = w';
 
 % define timesteps
-tfinal = 50;
+tfinal = 100;
 
 % ode
 %f = @(t,x) w + (A/size(w,1)).*sin(S - x);
+
+% modulate between these two to go between original model and llama model
 f = @(t,x) fireflyodes(x,t,u,w,A);
+%f = @(t,x) llama_model(x,t,w,A);
 
 %% Solve the ODE
 options = odeset('RelTol', 1e-10, 'AbsTol', 1e-10);
@@ -31,7 +42,7 @@ plot(t,xmod2pi)
 
 %% visualization
 matrix = Traj2Vis(xmod2pi, 0.2*pi);
-FireFlyMovie(matrix, 'Movie_3')
+FireFlyMovie(matrix, movie_name)
 %image(matrix(:,:,1))
 
 %% see if they've reached synch
