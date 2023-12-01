@@ -6,8 +6,8 @@ stable = asin(muspan);
 unstable = pi - asin(muspan);
 figure
 hold on
-plot(muspan, stable, '-b')
-plot(muspan, unstable, '--b')
+plot(muspan, stable, '-b', 'LineWidth', 3)
+plot(muspan, unstable, '--b', 'LineWidth', 3)
 xline(0)
 yline(0)
 %yline(pi)
@@ -17,7 +17,7 @@ yticks([-pi/2 0 pi/2 pi 3*pi/2]);
 yticklabels({'-\pi/2', '0', '\pi/2', '\pi', '3\pi/2'});
 xlabel('\mu')
 ylabel('\phi^*')
-set(gca, 'FontSize', 16)
+set(gca, 'FontSize', 20)
 
 %% numerical - don't run this; incomplete and I don't rlly know if it will work
 
